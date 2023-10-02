@@ -32,7 +32,6 @@ def load_llm(llm_name = "llama2", **kwargs):
             )
         case "openai":
             return OpenAIChat(openai_api_key=kwargs["openai_api_key"])
-        
         case _:
             raise Exception("LLM not found")
         
